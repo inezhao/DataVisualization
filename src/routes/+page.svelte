@@ -19,22 +19,22 @@
     const textSizeTitle = 20;
     const textSizeCategory = 13;
 
-    const AdvFill = '#def6cd';
-    const LuxFill = '#991a83';
-    const ComFill = 'rgb(0, 53, 165)';
+    const AdvFill = '#7fc3a4';
+    const LuxFill = '#a975b5';
+    const ComFill = '#657db7';
 
-    const ArmsArmourStroke = '#ff3d53';
-    const AdventuringEquipmentStroke = '#e1ff47';
+    const ArmsArmourStroke = '#de6673';
+    const AdventuringEquipmentStroke = '#559f87';
     const ToolsKitsStroke = '#ff9f41';
     const PotionsScrollsStroke = '#8ff281';
     const AnimalsTransportStroke ='#ffcb39';
-    const JewelryStroke = '#45ffc4';
-    const SummoningDeviceStroke = '#f443d2';
-    const MusicalInstrumentStroke = '#14a5ff';
+    const JewelryStroke = '#5dbfe1';
+    const SummoningDeviceStroke = '#d43db7';
+    const MusicalInstrumentStroke = '#1668c2';
 
     const legendBox = 20;
 
-    const Opacity = '0.6';
+    const Opacity = '0.7';
 
 
 </script>
@@ -272,8 +272,12 @@ style="fill:{LuxFill};stroke:{MusicalInstrumentStroke};stroke-width:{StrokeWidth
 
 <!--Shopping Bag Handle-->
 <path d="M 320 140
-        C 320 140, 380 -100, 450 140"
-        stroke="black" fill="transparent"stroke-width="5" fill-opacity="0.5"/>
+        C 320 140, 380 -105, 450 140"
+        stroke="black" fill="transparent"stroke-width="3" fill-opacity="0.5"/>
+<path d="M 315 140
+        C 315 140, 380 -120, 455 140"
+        stroke="black" fill="transparent"stroke-width="4" fill-opacity="0.5"/>
+
 <path d="M 247 140 l 276 0"
         stroke="black" fill="transparent"stroke-width="3" fill-opacity="0.5"/>
 <path d="M 247 521 l 276 0"
