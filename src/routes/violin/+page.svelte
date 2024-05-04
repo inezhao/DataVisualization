@@ -56,14 +56,14 @@
   };
 
   onMount(() => {
-    const margin = { top: 20, right: 30, bottom: 30, left: 60 };
-    const width = 600 - margin.left - margin.right;
-    const height = 400 - margin.top - margin.bottom;
+    const margin = { top: 20, right: 30, bottom: 30, left: 60+200 };
+    const width = 1000 - margin.left - margin.right;
+    const height = 600 - margin.top - margin.bottom;
 
     const svg = d3.select('#chart')
       // .attr('width', width + margin.left + margin.right)
-			.attr('width', 1000) 
-      .attr('height', height + margin.top + margin.bottom)
+			.attr('width', 1700)
+      .attr('height', 700)
       .append('g')
       .attr('transform', `translate(${margin.left},${margin.top})`);
 
@@ -366,76 +366,79 @@
     // Buttons for Lux 
     const buttonLux = svg.append('g')
       .attr('class', 'buttonLux')
-      .attr('transform', `translate(${ -50}, ${50})`) 
+      .attr('transform', `translate(${ -100}, ${100})`) 
       .on('click', updateChart);
 
     buttonLux.append('rect')
-      .attr('width', 110)
+      .attr('width', 150)
       .attr('height', 30) 
       .attr('fill', 'lightblue') 
       .attr('rx', 5)  
       .attr('ry', 5);
 
     buttonLux.append('text')
-      .attr('x', 55) 
+      .attr('x', 75) 
       .attr('y', 18)
       .attr('text-anchor', 'middle')
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
-      .style('font-size', '10px')
+      .style('font-size', '15px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
       .text('LUXURY SPECIALTIES');
 
 		// Buttons for Adventuring
     const buttonAdv = svg.append('g')
       .attr('class', 'buttonAdv')
-      .attr('transform', `translate(${ -50}, ${280})`)  
+      .attr('transform', `translate(${ -100}, ${450})`)  
       .on('click', updateChartA);
 
     buttonAdv.append('rect')
-      .attr('width', 110)
+      .attr('width', 150)
       .attr('height', 30) 
       .attr('fill', 'lightblue') 
       .attr('rx', 5)  
       .attr('ry', 5);
 
     buttonAdv.append('text')
-      .attr('x', 55) 
+      .attr('x', 75) 
       .attr('y', 18)
       .attr('text-anchor', 'middle')
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
-      .style('font-size', '10px')
-      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+      .style('font-size', '15px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif')
+	  .style('stroke', 'black')
       .text('ADVENTURING');
 
 		// Buttons for Comission
     const buttonCom = svg.append('g')
       .attr('class', 'buttonCom')
-      .attr('transform', `translate(${ -50}, ${170})`)    
+      .attr('transform', `translate(${ -100}, ${250})`)    
       .on('click', updateChartC); 
 
     buttonCom.append('rect')
-      .attr('width', 110)
+      .attr('width', 150)
       .attr('height', 30) 
       .attr('fill', 'lightblue') 
       .attr('rx', 5)  
       .attr('ry', 5);
 
     buttonCom.append('text')
-      .attr('x', 55) 
+      .attr('x', 72	) 
       .attr('y', 18)
       .attr('text-anchor', 'middle')
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
-      .style('font-size', '10px')
-      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+      .style('font-size', '15px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif')
+	  .style('stroke', 'black')
       .text('COMISSION'); 
 		
 		// Button for adventuring equipments 
 		const buttonAE = svg.append('g') 
       .attr('class', 'buttonAE')
-      .attr('transform', `translate(${550}, ${300})`)   
+      .attr('transform', `translate(${800}, ${300})`)   
       .on('click', updateChartAE); 
 
     buttonAE.append('rect') 
@@ -453,12 +456,13 @@
       .attr('fill', 'black')
       .style('font-size', '12px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
       .text('ADVENTURING EQUIPMENT'); 
 
 		// Button for animals and transportation
 		const buttonAT = svg.append('g')
       .attr('class', 'buttonAT')
-      .attr('transform', `translate(${550}, ${260})`) 
+      .attr('transform', `translate(${800}, ${260})`) 
       .on('click', updateChartAT);
 
     buttonAT.append('rect')
@@ -476,12 +480,13 @@
       .attr('fill', 'black')
       .style('font-size', '12px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
       .text('ANIMALS & TRANSPORTATION'); 
 
 		// Button for arms and armour
 		const buttonAA = svg.append('g')
       .attr('class', 'buttonAA')
-      .attr('transform', `translate(${550}, ${220})`) 
+      .attr('transform', `translate(${800}, ${220})`) 
       .on('click', updateChartAA);
 
     buttonAA.append('rect')
@@ -499,12 +504,13 @@
       .attr('fill', 'black')
       .style('font-size', '12px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
       .text('ARMS & ARMOUR'); 
 
 		// Button for Jewelery
 		const buttonJewelery = svg.append('g')
       .attr('class', 'buttonJewelery')
-      .attr('transform', `translate(${550}, ${180})`) 
+      .attr('transform', `translate(${800}, ${180})`) 
       .on('click', updateChartJewlery);
 
     buttonJewelery.append('rect')
@@ -522,12 +528,13 @@
       .attr('fill', 'black')
       .style('font-size', '12px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
       .text('JEWELRY'); 
 
 		// Button for musical instruments
 		const buttonMI = svg.append('g')
       .attr('class', 'buttonMI')
-      .attr('transform', `translate(${550}, ${140})`) 
+      .attr('transform', `translate(${800}, ${140})`) 
       .on('click', updateChartMI);
 
     buttonMI.append('rect')
@@ -545,12 +552,13 @@
       .attr('fill', 'black')
       .style('font-size', '12px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
       .text('MUSICAL INSTRUMENTS'); 
 
 		// Button for potions and scrolls
 		const buttonPS = svg.append('g')
       .attr('class', 'buttonPS')
-      .attr('transform', `translate(${550}, ${100})`)  
+      .attr('transform', `translate(${800}, ${100})`)  
       .on('click', updateChartPS);
 
     buttonPS.append('rect')
@@ -568,12 +576,13 @@
       .attr('fill', 'black')
       .style('font-size', '12px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
       .text('POTIONS & SCROLLS'); 
 
 		// Button for summoning devices
 		const buttonSD = svg.append('g')
       .attr('class', 'buttonSD')
-      .attr('transform', `translate(${550}, ${60})`) 
+      .attr('transform', `translate(${800}, ${60})`) 
       .on('click', updateChartSD);
 
     buttonSD.append('rect')
@@ -591,12 +600,13 @@
       .attr('fill', 'black') 
       .style('font-size', '12px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
       .text('SUMMONING DEVICE'); 
 
 		// Button for tools and kits
 		const buttonTK = svg.append('g')
       .attr('class', 'buttonTK')
-      .attr('transform', `translate(${550}, ${20})`) 
+      .attr('transform', `translate(${800}, ${20})`) 
       .on('click', updateChartTK);
 
     buttonTK.append('rect')
@@ -614,6 +624,7 @@
       .attr('fill', 'black')
       .style('font-size', '12px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
       .text('TOOLS AND KITS'); 
  
 
@@ -656,21 +667,23 @@
 			// Add label for price axis
 		svg.append("text")
 		  .attr("x", width / 4 - 100) // Adjust position as needed
-		  .attr("y", height + margin.top + 8) // Adjust position as needed  
+		  .attr("y", height + margin.top + 15) // Adjust position as needed  
 		  .attr("text-anchor", "middle")
 			.style("fill", "black")
-			.style('font-size', '12px')
+			.style('font-size', '20px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
 		  .text("Average Price per Product (CP)"); 
 		
 		// Add label for delivery time axis
 		svg.append("text")
 		  .attr("x", 3 * width / 4 + 120) // Adjust position as needed
-		  .attr("y", height + margin.top + 8) // Adjust position as needed
+		  .attr("y", height + margin.top + 15) // Adjust position as needed
 	    .attr("text-anchor", "middle")
 			.style("fill", "black")
-			.style('font-size', '12px')
+			.style('font-size', '20px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+	  .style('stroke', 'black')
 	    .text("Average Delivery Time (days)"); 
 
     svg.append('g')
@@ -683,25 +696,26 @@
 
 			// Append a single title for all legends
 		svg.append('text')
-		    .attr('x', width + margin.right / 4 + 40)
+		    .attr('x', width + margin.right / 4 + 70)
 		    .attr('y', +10) // Adjust this value as needed for positioning
 		    .attr('fill', 'black')
-				.style('font-size', '20px')
-        
+				.style('font-size', '25px')
+				.style('stroke', 'black')
 		    .text("Types of Products"); 
 
 		// Append a single title for business unit
 		svg.append('text')
-		    .attr('x', -55)
+		    .attr('x', -100)
 		    .attr('y', +10) // Adjust this value as needed for positioning
 		    .attr('fill', 'black')
-				.style('font-size', '20px')
-        .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
+				.style('font-size', '25px')
+        .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif')
+		.style('stroke', 'black')
 		    .text("Business Unit")
 
 			// Add white lines parallel to the x-axis
-			const line1Y = 131; // Adjust the y-coordinate of the first line
-			const line2Y = 227; // Adjust the y-coordinate of the second line
+			const line1Y = 206; // Adjust the y-coordinate of the first line
+			const line2Y = 355; // Adjust the y-coordinate of the second line
 			const lineWidth = width; // Adjust the width of the lines to cover the entire width of the SVG
 			
 			svg.append('line')
@@ -722,10 +736,19 @@
     }
   });
 </script>
-<h2 style="font-size: 20px;'font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') ">Average Delivery Time and Price for Product Types Belonging to Different Business Units
+<h2 style="font-size: 20px;'font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif';stroke: black ">Average Delivery Time and Price for Product Types Belonging to Different Business Units
 	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
 	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
 	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
 	<button type="submit" onclick="location.href = '../';">Shopping bag plot</button>
 </h2>
 <svg id="chart" style="background-color:#daebf1"></svg>
+
+<style>
+	h2{
+		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		fill:black;
+		stroke:black;
+		font-size: 125%;
+    }
+</style>
