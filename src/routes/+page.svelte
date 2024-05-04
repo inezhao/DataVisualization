@@ -53,7 +53,6 @@
       hovered = '';
     }
 
-
 </script>
   
 <h2>Graph title</h2>
@@ -92,7 +91,7 @@
     fill-opacity:{hovered == 'ARMS & ARMOUR' ? 1: categoryShareOpacity};stroke-opacity:0.9"
       on:mouseover={() => startHover('ARMS & ARMOUR')}
       on:mouseout={endHover}>
-    <title>{100*CategoryShare[0]}%</title>
+    <title>{(100*CategoryShare[0]).toFixed(2)}%</title>
     </rect>
     {#if hovered=='ARMS & ARMOUR'}
       <g transform="translate(700)">
@@ -106,7 +105,7 @@
       height={heightSize*CategoryShare[0]}
       style="fill:{AdvFill};stroke:{ArmsArmourStroke};stroke-width:{StrokeWidth};
       fill-opacity:{Opacity};stroke-opacity:0.9" >
-      <title>{100*BusinessUnitShare[0]}%</title>
+      <title>{(100*BusinessUnitShare[0]).toFixed(2)}%</title>
       </rect>
 
       <rect x={xPos  + (widthSize*BusinessUnitShare[0]) + Hspacing }
@@ -114,7 +113,7 @@
       width={(widthSize*BusinessUnitShare[1])}
       height={heightSize*CategoryShare[1]}
       style="fill:{ComFill};stroke:{ArmsArmourStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-      <title>{BusinessUnitShare[1]}</title>
+      <title>{(100*BusinessUnitShare[1]).toFixed(2)}%</title>
       </rect>
         
       <rect x={xPos  + (widthSize*BusinessUnitShare[0]) + (widthSize*BusinessUnitShare[1]) + 2*Hspacing }
@@ -122,7 +121,7 @@
       width={(widthSize*BusinessUnitShare[2])}
       height={heightSize*CategoryShare[2]}
       style="fill:{LuxFill};stroke:{ArmsArmourStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-      <title>{BusinessUnitShare[2]}</title>
+      <title>{(100*BusinessUnitShare[2]).toFixed(2)}%</title>
       </rect>
 
     <!--Second 3-5 Adventuring Equipment-->
@@ -139,7 +138,7 @@
     fill-opacity:{hovered == 'ADVENTURING EQUIPMENT'? 1.0: categoryShareOpacity};stroke-opacity:0.9"
       on:mouseover={() => startHover('ADVENTURING EQUIPMENT')}
       on:mouseout={endHover}>
-    <title>{CategoryShare[3]}</title>
+    <title>{(100*CategoryShare[3]).toFixed(2)}%</title>
     </rect>
     {#if hovered=='ADVENTURING EQUIPMENT'}
       <g transform="translate(700)">
@@ -152,7 +151,7 @@
     width={(widthSize*BusinessUnitShare[3])}
     height={heightSize*CategoryShare[3]}
     style="fill:{AdvFill};stroke:{AdventuringEquipmentStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">
-    <title>{BusinessUnitShare[3]}</title>
+    <title>{(100*BusinessUnitShare[3]).toFixed(2)}%</title>
     </rect>
 
     <rect x={xPos  + (widthSize*BusinessUnitShare[3]) + Hspacing }
@@ -160,7 +159,7 @@
     width={(widthSize*BusinessUnitShare[4])}
     height={heightSize*CategoryShare[4]}
     style="fill:{ComFill};stroke:{AdventuringEquipmentStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[4]}</title>
+    <title>{(100*BusinessUnitShare[4]).toFixed(2)}%</title>
     </rect>
       
     <rect x={xPos + (widthSize*BusinessUnitShare[3]) + (widthSize*BusinessUnitShare[4]) + 2*Hspacing}
@@ -168,7 +167,7 @@
     width={(widthSize*BusinessUnitShare[5])}
     height={heightSize*CategoryShare[5]}
     style="fill:{LuxFill};stroke:{AdventuringEquipmentStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[5]}</title>
+    <title>{(100*BusinessUnitShare[5]).toFixed(2)}%</title>
     </rect>
 
     <!--Third 6-8 Tools & Kits-->
@@ -185,7 +184,7 @@
     fill-opacity:{hovered == 'TOOLS & KITS'? 1.0: categoryShareOpacity};stroke-opacity:0.9"
       on:mouseover={() => startHover('TOOLS & KITS')}
       on:mouseout={endHover}>
-    <title>{CategoryShare[6]}</title>
+    <title>{(100*CategoryShare[6]).toFixed(2)}%</title>
     </rect>
     {#if hovered=='TOOLS & KITS'}
       <g transform="translate(700)">
@@ -198,7 +197,7 @@
     width={(widthSize*BusinessUnitShare[6])}
     height={heightSize*CategoryShare[6]}
     style="fill:{AdvFill};stroke:{ToolsKitsStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">
-    <title>{BusinessUnitShare[6]}</title>
+    <title>{(100*BusinessUnitShare[6]).toFixed(2)}%</title>
     </rect>
 
     <rect x={xPos  + (widthSize*BusinessUnitShare[6]) + Hspacing }
@@ -206,7 +205,7 @@
     width={(widthSize*BusinessUnitShare[7])}
     height={heightSize*CategoryShare[7]}
     style="fill:{ComFill};stroke:{ToolsKitsStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[7]}</title>
+    <title>{(100*BusinessUnitShare[7]).toFixed(2)}%</title>
     </rect>
       
     <rect x={xPos + (widthSize*BusinessUnitShare[6]) + (widthSize*BusinessUnitShare[7]) + 2*Hspacing }
@@ -214,7 +213,7 @@
     width={(widthSize*BusinessUnitShare[8])}
     height={heightSize*CategoryShare[8]}
     style="fill:{LuxFill};stroke:{ToolsKitsStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">
-    <title>{BusinessUnitShare[8]}</title>
+    <title>{(100*BusinessUnitShare[8]).toFixed(2)}%</title>
     </rect>
 
     <!--Fourth 9-11 Potions & Scrolls-->
@@ -231,7 +230,7 @@
     fill-opacity:{hovered == 'POTIONS & SCROLLS'? 1.0: categoryShareOpacity};stroke-opacity:0.9"
       on:mouseover={() => startHover('POTIONS & SCROLLS')}
       on:mouseout={endHover}>
-    <title>{CategoryShare[9]}</title>
+    <title>{(100*CategoryShare[9]).toFixed(2)}%</title>
     </rect>
     {#if hovered=='POTIONS & SCROLLS'}
       <g transform="translate(700)">
@@ -244,7 +243,7 @@
     width={(widthSize*BusinessUnitShare[9])}
     height={heightSize*CategoryShare[9]}
     style="fill:{AdvFill};stroke:{PotionsScrollsStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">
-    <title>{BusinessUnitShare[9]}</title>
+    <title>{(100*BusinessUnitShare[9]).toFixed(2)}%</title>
     </rect>
 
     <rect x={xPos  + (widthSize*BusinessUnitShare[9]) + Hspacing }
@@ -252,7 +251,7 @@
     width={(widthSize*BusinessUnitShare[10])}
     height={heightSize*CategoryShare[10]}
     style="fill:{ComFill};stroke:{PotionsScrollsStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[10]}</title>
+    <title>{(100*BusinessUnitShare[10]).toFixed(2)}%</title>
     </rect>
       
     <rect x={xPos + (widthSize*BusinessUnitShare[9]) + (widthSize*BusinessUnitShare[10]) + 2*Hspacing }
@@ -260,7 +259,7 @@
     width={(widthSize*BusinessUnitShare[11])}
     height={heightSize*CategoryShare[11]}
     style="fill:{LuxFill};stroke:{PotionsScrollsStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[1]}</title>
+    <title>{(100*BusinessUnitShare[11]).toFixed(2)}%</title>
     </rect>
 
     <!--Fifth 12-13 Animals & Transportation-->
@@ -277,7 +276,7 @@
     fill-opacity:{hovered == 'ANIMALS & TRANSPORTATION'? 1.0: categoryShareOpacity};stroke-opacity:0.9"
       on:mouseover={() => startHover('ANIMALS & TRANSPORTATION')}
       on:mouseout={endHover}>
-    <title>{CategoryShare[12]}</title>
+    <title>{ (100*CategoryShare[12]).toFixed(2)}%</title>
     </rect>
     {#if hovered=='ANIMALS & TRANSPORTATION'}
       <g transform="translate(700)">
@@ -291,7 +290,7 @@
     width={widthSize*(BusinessUnitShare[12]+0.025)}
     height={heightSize*CategoryShare[12]}
     style="fill:{AdvFill};stroke:{AnimalsTransportStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">
-    <title>{BusinessUnitShare[12]}</title>
+    <title>{(100*BusinessUnitShare[12]).toFixed(2)}%</title>
     </rect>
 
     <rect x={xPos  + (widthSize*(BusinessUnitShare[12] + 0.025)) + Hspacing}
@@ -299,7 +298,7 @@
     width={widthSize*(BusinessUnitShare[13] +0.015)}
     height={heightSize*CategoryShare[13]}
     style="fill:{LuxFill};stroke:{AnimalsTransportStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[13]}</title>
+    <title>{(100*BusinessUnitShare[13]).toFixed(2)}%</title>
     </rect>
 
     <!--Sixth 14-16 Jewelry-->
@@ -317,7 +316,7 @@
     fill-opacity:{hovered=='JEWELRY'? 1.0: categoryShareOpacity};stroke-opacity:0.9"
       on:mouseover={() => startHover('JEWELRY')}
       on:mouseout={endHover}>
-    <title>{CategoryShare[14]}</title>
+    <title>{(100*CategoryShare[14]).toFixed(2)}%</title>
     </rect>
     {#if hovered=='JEWELRY'}
       <g transform="translate(700)">
@@ -332,7 +331,7 @@
     width={widthSize*(BusinessUnitShare[14])}
     height={heightSize*CategoryShare[14]}
     style="fill:{AdvFill};stroke:{JewelryStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">
-    <title>{BusinessUnitShare[14]}</title>
+    <title>{(100*BusinessUnitShare[14]).toFixed(2)}%</title>
     </rect>
 
     <rect x={xPos  + (widthSize*(BusinessUnitShare[14])) + Hspacing}
@@ -341,7 +340,7 @@
     width={widthSize*(BusinessUnitShare[15])}
     height={heightSize*CategoryShare[15]}
     style="fill:{ComFill};stroke:{JewelryStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[15]}</title>
+    <title>{(100*BusinessUnitShare[15]).toFixed(2)}%</title>
     </rect>
       
     <rect x={xPos  + (widthSize*BusinessUnitShare[14]) + (widthSize*BusinessUnitShare[15]) + 2*Hspacing }
@@ -350,7 +349,7 @@
     width={(widthSize*BusinessUnitShare[16])}
     height={heightSize*CategoryShare[16]}
     style="fill:{LuxFill};stroke:{JewelryStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[16]}</title>
+    <title>{ (100*BusinessUnitShare[16]).toFixed(2)}%</title>
     </rect>
 
     <!--Seventh 17-19 Summoning Device-->
@@ -368,7 +367,7 @@
     fill-opacity:{hovered=='SUMMONING DEVICE'? 1.0: categoryShareOpacity};stroke-opacity:0.9"
       on:mouseover={() => startHover('SUMMONING DEVICE')}
       on:mouseout={endHover}>
-    <title>{CategoryShare[17]}</title>
+    <title>{ (100*CategoryShare[17]).toFixed(2)}%</title>
     </rect>
     {#if hovered=='SUMMONING DEVICE'}
       <g transform="translate(700)">
@@ -382,7 +381,7 @@
     width={widthSize*(BusinessUnitShare[17])}
     height={heightSize*CategoryShare[17]}
     style="fill:{AdvFill};stroke:{SummoningDeviceStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">
-    <title>{BusinessUnitShare[17]}</title>
+    <title>{ (100*BusinessUnitShare[17]).toFixed(2)}%</title>
     </rect>
 
     <rect x={xPos  + (widthSize*(BusinessUnitShare[17])) + Hspacing}
@@ -391,7 +390,7 @@
     width={widthSize*(BusinessUnitShare[18])}
     height={heightSize*CategoryShare[18]}
     style="fill:{ComFill};stroke:{SummoningDeviceStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[18]}</title>
+    <title>{ (100*BusinessUnitShare[18]).toFixed(2)}%</title>
     </rect>
       
     <rect x={xPos  + (widthSize*BusinessUnitShare[17]) + (widthSize*BusinessUnitShare[18]) + 2*Hspacing }
@@ -400,7 +399,7 @@
     width={(widthSize*BusinessUnitShare[19])}
     height={heightSize*CategoryShare[19]}
     style="fill:{LuxFill};stroke:{SummoningDeviceStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[19]}</title>
+    <title>{ (100*BusinessUnitShare[19]).toFixed(2)}%</title>
     </rect>
 
     <!--Seventh 20-21 Musical Instrument-->
@@ -421,7 +420,7 @@
     fill-opacity:{hovered=='MUSICAL INSTRUMENT'? 1.0: categoryShareOpacity};stroke-opacity:0.9"
       on:mouseover={() => startHover('MUSICAL INSTRUMENT')}
       on:mouseout={endHover}>
-    <title>{CategoryShare[20]}</title>
+    <title>{ (100*CategoryShare[20]).toFixed(2)}%</title>
     </rect>
     
     {#if hovered=='MUSICAL INSTRUMENT'}
@@ -438,7 +437,7 @@
     width={widthSize*(BusinessUnitShare[20]+0.015 )}
     height={heightSize*CategoryShare[20]}
     style="fill:{AdvFill};stroke:{MusicalInstrumentStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">
-    <title>{BusinessUnitShare[20]}</title>
+    <title>{ (100*BusinessUnitShare[20]).toFixed(2)}%</title>
     </rect>
 
     <rect x={xPos  + (widthSize*(BusinessUnitShare[20]+0.015)) + Hspacing}
@@ -448,7 +447,7 @@
     width={widthSize*(BusinessUnitShare[21]+0.025)}
     height={heightSize*CategoryShare[21]}
     style="fill:{LuxFill};stroke:{MusicalInstrumentStroke};stroke-width:{StrokeWidth};fill-opacity:{Opacity};stroke-opacity:0.9">>
-    <title>{BusinessUnitShare[21]}</title>
+    <title>{ (100*BusinessUnitShare[21]).toFixed(2)}%</title>
     </rect>
 
     <!--Shopping Bag Handle-->
