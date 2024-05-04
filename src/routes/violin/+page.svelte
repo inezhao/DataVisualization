@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
   import { onMount } from 'svelte';
   import * as d3 from 'd3';
    
@@ -381,6 +383,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '10px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('LUXURY SPECIALTIES');
 
 		// Buttons for Adventuring
@@ -403,6 +406,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '10px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('ADVENTURING');
 
 		// Buttons for Comission
@@ -425,6 +429,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '10px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('COMISSION'); 
 		
 		// Button for adventuring equipments 
@@ -447,6 +452,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('ADVENTURING EQUIPMENT'); 
 
 		// Button for animals and transportation
@@ -469,6 +475,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('ANIMALS & TRANSPORTATION'); 
 
 		// Button for arms and armour
@@ -491,6 +498,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('ARMS & ARMOUR'); 
 
 		// Button for Jewelery
@@ -513,6 +521,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('JEWLERY'); 
 
 		// Button for musical instruments
@@ -535,6 +544,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('MUSICAL INSTRUMENTS'); 
 
 		// Button for potions and scrolls
@@ -557,6 +567,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('POTIONS & SCROLLS'); 
 
 		// Button for summoning devices
@@ -579,6 +590,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black') 
       .style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('SUMMONING DEVICE'); 
 
 		// Button for tools and kits
@@ -601,6 +613,7 @@
       .attr('alignment-baseline', 'middle')
       .attr('fill', 'black')
       .style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
       .text('TOOLS AND KITS'); 
  
 
@@ -645,8 +658,9 @@
 		  .attr("x", width / 4 - 100) // Adjust position as needed
 		  .attr("y", height + margin.top + 8) // Adjust position as needed  
 		  .attr("text-anchor", "middle")
-			.style("fill", "white")
+			.style("fill", "black")
 			.style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
 		  .text("Average Price per Product (CP)"); 
 		
 		// Add label for delivery time axis
@@ -654,8 +668,9 @@
 		  .attr("x", 3 * width / 4 + 120) // Adjust position as needed
 		  .attr("y", height + margin.top + 8) // Adjust position as needed
 	    .attr("text-anchor", "middle")
-			.style("fill", "white")
+			.style("fill", "black")
 			.style('font-size', '12px')
+      .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
 	    .text("Average Delivery Time (days)"); 
 
     svg.append('g')
@@ -670,16 +685,18 @@
 		svg.append('text')
 		    .attr('x', width + margin.right / 4 + 40)
 		    .attr('y', +10) // Adjust this value as needed for positioning
-		    .attr('fill', 'white')
+		    .attr('fill', 'black')
 				.style('font-size', '20px')
+        
 		    .text("Types of Products"); 
 
 		// Append a single title for business unit
 		svg.append('text')
 		    .attr('x', -55)
 		    .attr('y', +10) // Adjust this value as needed for positioning
-		    .attr('fill', 'white')
+		    .attr('fill', 'black')
 				.style('font-size', '20px')
+        .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
 		    .text("Business Unit")
 
 			// Add white lines parallel to the x-axis
@@ -692,7 +709,7 @@
 			  .attr('y1', line1Y) // Starting y-coordinate
 			  .attr('x2', lineWidth) // Ending x-coordinate
 			  .attr('y2', line1Y) // Ending y-coordinate
-			  .style('stroke', 'white') // Line color
+			  .style('stroke', 'black') // Line color
 			  .style('stroke-width', 2); // Line width 
 			
 			svg.append('line')
@@ -700,10 +717,10 @@
 			  .attr('y1', line2Y) // Starting y-coordinate
 			  .attr('x2', lineWidth) // Ending x-coordinate
 			  .attr('y2', line2Y) // Ending y-coordinate
-			  .style('stroke', 'white') // Line color
+			  .style('stroke', 'black') // Line color
 			  .style('stroke-width', 2); // Line width
     }
   });
 </script>
-<h1 style="margin-top: 2px; margin-left: 0px; font-size: 24px;">Average Delivery Time and Average Price for Product Types Beloning to Different Business Units</h1>
+<h1 style="margin-top: 2px; margin-left: 0px; font-size: 24px;'font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') ">Average Delivery Time and Average Price for Product Types Beloning to Different Business Units</h1>
 <svg id="chart"></svg>
