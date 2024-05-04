@@ -722,5 +722,10 @@
     }
   });
 </script>
-<h1 style="margin-top: 2px; margin-left: 0px; font-size: 24px;'font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') ">Average Delivery Time and Average Price for Product Types Beloning to Different Business Units</h1>
-<svg id="chart"></svg>
+<h2 style="font-size: 20px;'font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') ">Average Delivery Time and Price for Product Types Belonging to Different Business Units
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+	<button type="submit" onclick="location.href = '../';">Shopping bag plot</button>
+</h2>
+<svg id="chart" style="background-color:#daebf1"></svg>
