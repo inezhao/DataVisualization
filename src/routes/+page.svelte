@@ -70,6 +70,10 @@
     stroke:black;
     font-size: 125%;
     }
+    #description {
+      stroke: gray;
+      fill: gray;
+    }
 </style>
 <h2>Proportion of orders by Product Types and Business Units + Number of orders throughout the years of each Product Type
   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
@@ -86,6 +90,9 @@
       Proportion of Orders</text>
       <text x={20} y={52} fill="black" font-size={textSizeTitle-2} >
         by Product Types and Business Units</text>
+      <text id="description" x={20} y={600} font-size={textSizeTitle-4} font-style="italic">
+        [ Hover over the boxes next to the Product Types for their purchase trends throught the years ]
+      </text>
 
     <!--First 0-2 Arms & Armour-->
     <text x={xPos- 115 -verticalBarSize} y={yPos + heightSize*CategoryShare[0]/2}

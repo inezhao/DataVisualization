@@ -742,7 +742,14 @@
 	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
 	<button type="submit" onclick="location.href = '../';">Shopping bag plot</button>
 </h2>
-<svg id="chart" style="background-color:#daebf1"></svg>
+<svg id="chart" style="background-color:#daebf1">
+	<text id="description" x={1100} y={500} font-size={17} font-style="italic">
+        [ Click on the names of the Business Units or Types of Products
+      </text>
+	  <text id="description" x={1100} y={520} font-size={17} font-style="italic">
+        for adding/removing them from the plot ]
+      </text>
+</svg>
 
 <style>
 	h2{
@@ -750,5 +757,9 @@
 		fill:black;
 		stroke:black;
 		font-size: 125%;
+    }
+	#description {
+      stroke: gray;
+      fill: gray;
     }
 </style>
