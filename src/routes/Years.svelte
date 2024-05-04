@@ -62,7 +62,7 @@
     .web {
         stroke: black;
         stroke-width: 2;
-        stroke-dasharray: 15,10;
+        stroke-dasharray: 14,10;
         stroke-opacity: 0.1;
     }
     .obrub {
