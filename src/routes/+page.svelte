@@ -10,11 +10,14 @@
 
     const widthSize = 250;
     const heightSize = 300;
-    const xPos = 250;
+    const xPos = 300;
     const yPos = 400;
     const Hspacing = 10;
     const Vspacing = 10;
     const StrokeWidth = 4.5;
+
+    const verticalBarSize = 40;
+    const verticalBarWidth = 20;
 
     const textSizeTitle = 20;
     const textSizeCategory = 13;
@@ -34,7 +37,8 @@
 
     const legendBox = 20;
 
-    const Opacity = '0.7';
+    const categoryShareOpacity = 0.8;
+    const Opacity = 0.6;
 
 
 </script>
@@ -61,7 +65,18 @@
     by Product Types and Business Units</text>
 
 <!--First 0-2 Arms & Armour-->
-<text x={xPos- 115} y={yPos + heightSize*CategoryShare[0]/2} font-size={textSizeCategory}>{Type[0]}</text>
+<text x={xPos- 115 -verticalBarSize} y={yPos + heightSize*CategoryShare[0]/2}
+ font-size={textSizeCategory}>{Type[0]}</text>
+<!--First 0-2 Arms & Armour CategoryShare-->
+<rect x={xPos -verticalBarSize}
+y={yPos}
+width={(verticalBarWidth)}
+height={heightSize*CategoryShare[0]}
+style="fill:{ArmsArmourStroke};stroke:{ArmsArmourStroke};stroke-width:{StrokeWidth};
+fill-opacity:{categoryShareOpacity};stroke-opacity:0.9">
+<title>{100*CategoryShare[0]}%</title>
+</rect>
+<!--First 0-2 Arms & Armour BusinessUnits-->
   <rect x={xPos}
   y={yPos}
   width={(widthSize*BusinessUnitShare[0])}
@@ -87,8 +102,18 @@
   </rect>
 
 <!--Second 3-5 Adventuring Equipment-->
-<text x={xPos-170} y={yPos + heightSize*CategoryShare[3] - heightSize*CategoryShare[0] - Vspacing}
+<text x={xPos-170-verticalBarSize} y={yPos + heightSize*CategoryShare[3] - heightSize*CategoryShare[0] - Vspacing}
   font-size={textSizeCategory}>{Type[3]}</text>
+<!--Second 3-5 Adventuring Equipment CategoryShare-->
+<rect x={xPos - verticalBarSize}
+y={yPos - heightSize*CategoryShare[3] - Vspacing}
+width={(verticalBarWidth)}
+height={heightSize*CategoryShare[3]}
+style="fill:{AdventuringEquipmentStroke};stroke:{AdventuringEquipmentStroke};stroke-width:{StrokeWidth};
+fill-opacity:{categoryShareOpacity};stroke-opacity:0.9">
+<title>{CategoryShare[3]}</title>
+</rect>
+<!--Second 3-5 Adventuring Equipment BusinessUnits-->
 <rect x={xPos}
 y={yPos - heightSize*CategoryShare[3] - Vspacing}
 width={(widthSize*BusinessUnitShare[3])}
@@ -114,8 +139,18 @@ style="fill:{LuxFill};stroke:{AdventuringEquipmentStroke};stroke-width:{StrokeWi
 </rect>
 
 <!--Third 6-8 Tools & Kits-->
-<text x={xPos-90} y={yPos + heightSize*CategoryShare[6]/2 - heightSize*CategoryShare[0] - Vspacing} 
+<text x={xPos-90-verticalBarSize} y={yPos + heightSize*CategoryShare[6]/2 - heightSize*CategoryShare[0] - Vspacing} 
 fill="black" font-size={textSizeCategory}>{Type[6]}</text>
+<!--Third 6-8 Tools & Kits CategoryShare-->
+<rect x={xPos- verticalBarSize}
+y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] -  2*Vspacing}
+width={(verticalBarWidth)}
+height={heightSize*CategoryShare[6]}
+style="fill:{ToolsKitsStroke};stroke:{ToolsKitsStroke};stroke-width:{StrokeWidth};
+fill-opacity:{categoryShareOpacity};stroke-opacity:0.9">
+<title>{CategoryShare[6]}</title>
+</rect>
+<!--Third 6-8 Tools & Kits BusinessUnit-->
 <rect x={xPos}
 y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] -  2*Vspacing}
 width={(widthSize*BusinessUnitShare[6])}
@@ -141,8 +176,18 @@ style="fill:{LuxFill};stroke:{ToolsKitsStroke};stroke-width:{StrokeWidth};fill-o
 </rect>
 
 <!--Fourth 9-11 Potions & Scrolls-->
-<text x={xPos-130} y={yPos + 4 + heightSize*CategoryShare[9] - heightSize*CategoryShare[0] - heightSize*CategoryShare[3] + Vspacing}
+<text x={xPos-130-verticalBarSize} y={yPos + 4 + heightSize*CategoryShare[9] - heightSize*CategoryShare[0] - heightSize*CategoryShare[3] + Vspacing}
       fill="black" font-size={textSizeCategory}>{Type[9]}</text>
+<!--Fourth 9-11 Potions & Scrolls CategoryShare-->
+<rect x={xPos - verticalBarSize}
+y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] - heightSize*CategoryShare[9]-  3*Vspacing}
+width={(verticalBarWidth)}
+height={heightSize*CategoryShare[9]}
+style="fill:{PotionsScrollsStroke};stroke:{PotionsScrollsStroke};stroke-width:{StrokeWidth};
+fill-opacity:{categoryShareOpacity};stroke-opacity:0.9">
+<title>{CategoryShare[9]}</title>
+</rect>
+<!--Fourth 9-11 Potions & Scrolls BusinessUnit-->
 <rect x={xPos}
 y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] - heightSize*CategoryShare[9]-  3*Vspacing}
 width={(widthSize*BusinessUnitShare[9])}
@@ -168,8 +213,19 @@ style="fill:{LuxFill};stroke:{PotionsScrollsStroke};stroke-width:{StrokeWidth};f
 </rect>
 
 <!--Fifth 12-13 Animals & Transportation-->
-<text x={xPos-185} y={yPos + 2 + heightSize*CategoryShare[12]- heightSize*CategoryShare[3] - heightSize*CategoryShare[0]}
+<text x={xPos-185-verticalBarSize} y={yPos + 2 + heightSize*CategoryShare[12]- heightSize*CategoryShare[3] - heightSize*CategoryShare[0]}
       fill="black" font-size={textSizeCategory}>{Type[12]}</text>
+<!--Fifth 12-13 Animals & Transportation CategoryShare-->
+<rect x={xPos - verticalBarSize}
+y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] - heightSize*CategoryShare[9]- heightSize*CategoryShare[12]-  4*Vspacing}
+width={verticalBarWidth}
+height={heightSize*CategoryShare[12]}
+style="fill:{AnimalsTransportStroke};stroke:{AnimalsTransportStroke};stroke-width:{StrokeWidth};
+fill-opacity:{categoryShareOpacity};stroke-opacity:0.9">
+<title>{CategoryShare[12]}</title>
+</rect>
+<!--Fifth 12-13 Animals & Transportation BusinessUnit-->
+
 <rect x={xPos}
 y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] - heightSize*CategoryShare[9]- heightSize*CategoryShare[12]-  4*Vspacing}
 width={widthSize*(BusinessUnitShare[12]+0.025)}
@@ -187,8 +243,20 @@ style="fill:{LuxFill};stroke:{AnimalsTransportStroke};stroke-width:{StrokeWidth}
 </rect>
 
 <!--Sixth 14-16 Jewelry-->
-<text x={xPos-58} y={yPos + 4 -heightSize*CategoryShare[14] - heightSize*CategoryShare[3] - heightSize*CategoryShare[0]}
+<text x={xPos-58-verticalBarSize} y={yPos + 4 -heightSize*CategoryShare[14] - heightSize*CategoryShare[3] - heightSize*CategoryShare[0]}
   fill="black" font-size={textSizeCategory}>{Type[14]}</text>
+<!--Sixth 14-16 Jewelry CategoryShare-->
+<rect x={xPos - verticalBarSize}
+y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] 
+  - heightSize*CategoryShare[9]- heightSize*CategoryShare[12] - heightSize*CategoryShare[14] -  5*Vspacing}
+width={verticalBarWidth}
+height={heightSize*CategoryShare[14]}
+style="fill:{JewelryStroke};stroke:{JewelryStroke};stroke-width:{StrokeWidth};
+fill-opacity:{categoryShareOpacity};stroke-opacity:0.9">
+<title>{CategoryShare[14]}</title>
+</rect>
+<!--Sixth 14-16 Jewelry BusinessUnit-->
+
 <rect x={xPos}
 y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] 
   - heightSize*CategoryShare[9]- heightSize*CategoryShare[12] - heightSize*CategoryShare[14] -  5*Vspacing}
@@ -217,8 +285,19 @@ style="fill:{LuxFill};stroke:{JewelryStroke};stroke-width:{StrokeWidth};fill-opa
 </rect>
 
 <!--Seventh 17-19 Summoning Device-->
-<text x={xPos-133} y={yPos + 2 - heightSize*CategoryShare[0]- heightSize*CategoryShare[3] - heightSize*CategoryShare[6]}
+<text x={xPos-133-verticalBarSize} y={yPos + 2 - heightSize*CategoryShare[0]- heightSize*CategoryShare[3] - heightSize*CategoryShare[6]}
   fill="black" font-size={textSizeCategory}>{Type[17]}</text>
+  <!--Seventh 17-19 Summoning Device CategoryShare-->
+  <rect x={xPos - verticalBarSize}
+y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] 
+  - heightSize*CategoryShare[9]- heightSize*CategoryShare[12] - heightSize*CategoryShare[14] - heightSize*CategoryShare[17] -  6*Vspacing}
+width={verticalBarWidth}
+height={heightSize*CategoryShare[17]}
+style="fill:{SummoningDeviceStroke};stroke:{SummoningDeviceStroke};stroke-width:{StrokeWidth};
+fill-opacity:{categoryShareOpacity};stroke-opacity:0.9">
+<title>{CategoryShare[17]}</title>
+</rect>
+  <!--Seventh 17-19 Summoning Device BusinessUnit-->
 <rect x={xPos}
 y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] 
   - heightSize*CategoryShare[9]- heightSize*CategoryShare[12] - heightSize*CategoryShare[14] - heightSize*CategoryShare[17] -  6*Vspacing}
@@ -247,9 +326,22 @@ style="fill:{LuxFill};stroke:{SummoningDeviceStroke};stroke-width:{StrokeWidth};
 </rect>
 
 <!--Seventh 20-21 Musical Instrument-->
-<text x={xPos-142} y={yPos - 17 -heightSize*CategoryShare[3] - heightSize*CategoryShare[6] - 
+<text x={xPos-142-verticalBarSize} y={yPos - 17 -heightSize*CategoryShare[3] - heightSize*CategoryShare[6] - 
   heightSize*CategoryShare[0]}
   fill="black" font-size={textSizeCategory}>{Type[20]}</text>
+
+<!--Seventh 20-21 Musical Instrument CategoryShare-->
+<rect x={xPos - verticalBarSize}
+y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] 
+  - heightSize*CategoryShare[9]- heightSize*CategoryShare[12] - heightSize*CategoryShare[14] - heightSize*CategoryShare[17]
+  -heightSize*CategoryShare[20] -  7*Vspacing}
+width={verticalBarWidth}
+height={heightSize*CategoryShare[20]}
+style="fill:{MusicalInstrumentStroke};stroke:{MusicalInstrumentStroke};stroke-width:{StrokeWidth};fill-opacity:{categoryShareOpacity};stroke-opacity:0.9">
+<title>{CategoryShare[20]}</title>
+</rect>
+
+<!--Seventh 20-21 Musical Instrument BusinessUnit-->
 <rect x={xPos}
 y={yPos - heightSize*CategoryShare[3] - heightSize*CategoryShare[6] 
   - heightSize*CategoryShare[9]- heightSize*CategoryShare[12] - heightSize*CategoryShare[14] - heightSize*CategoryShare[17]
@@ -271,24 +363,24 @@ style="fill:{LuxFill};stroke:{MusicalInstrumentStroke};stroke-width:{StrokeWidth
 </rect>
 
 <!--Shopping Bag Handle-->
-<path d="M 320 140
-        C 320 140, 380 -105, 450 140"
+<path d="M 370 140
+        C 370 140, 430 -105, 500 140"
         stroke="black" fill="transparent"stroke-width="3" fill-opacity="0.5"/>
-<path d="M 315 140
-        C 315 140, 380 -120, 455 140"
+<path d="M 365 140
+        C 365 140, 430 -120, 505 140"
         stroke="black" fill="transparent"stroke-width="4" fill-opacity="0.5"/>
 
-<path d="M 247 140 l 276 0"
+<path d="M 297 140 l 276 0"
         stroke="black" fill="transparent"stroke-width="3" fill-opacity="0.5"/>
-<path d="M 247 521 l 276 0"
+<path d="M 297 521 l 276 0"
         stroke="black" fill="transparent"stroke-width="3" fill-opacity="0.5"/>
 
 
 
 <!--Legends BusinessUnit-->
-<text x={xPos - 50} y={yPos + 150} fill="black" font-size={textSizeCategory}>ADVENTURING</text>
+<text x={xPos - 5} y={yPos + 150} fill="black" font-size={textSizeCategory}>ADVENTURING</text>
 <rect 
-  x={xPos - 50 - legendBox - Hspacing}
+  x={xPos - legendBox - Hspacing}
   y={yPos + 145 - legendBox + Vspacing}
   width={legendBox}
   height={legendBox}
@@ -296,9 +388,9 @@ style="fill:{LuxFill};stroke:{MusicalInstrumentStroke};stroke-width:{StrokeWidth
   <title></title>
 </rect>
 
-<text x={xPos + 90} y={yPos + 150} fill="black" font-size={textSizeCategory}>COMMISSIONS</text>
+<text x={xPos + 130 -5} y={yPos + 150} fill="black" font-size={textSizeCategory}>COMMISSIONS</text>
 <rect 
-  x={xPos +90 - legendBox - Hspacing}
+  x={xPos + 130 - legendBox - Hspacing}
   y={yPos + 145 - legendBox + Vspacing}
   width={legendBox}
   height={legendBox}
@@ -306,9 +398,9 @@ style="fill:{LuxFill};stroke:{MusicalInstrumentStroke};stroke-width:{StrokeWidth
   <title></title>
 </rect>
 
-<text x={xPos + 240} y={yPos + 150} fill="black" font-size={textSizeCategory}>LUXURY SPECIALTIES</text>
+<text x={xPos + 260 -5} y={yPos + 150} fill="black" font-size={textSizeCategory}>LUXURY SPECIALTIES</text>
 <rect 
-  x={xPos +240 - legendBox - Hspacing}
+  x={xPos +260 - legendBox - Hspacing}
   y={yPos + 145 - legendBox + Vspacing}
   width={legendBox}
   height={legendBox}
