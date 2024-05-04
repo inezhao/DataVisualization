@@ -522,7 +522,7 @@
       .attr('fill', 'black')
       .style('font-size', '12px')
       .style('font-family', 'Segoe UI, Tahoma, Geneva, Verdana, sans-serif') 
-      .text('JEWLERY'); 
+      .text('JEWELRY'); 
 
 		// Button for musical instruments
 		const buttonMI = svg.append('g')

@@ -204,7 +204,7 @@
             <text x={width/2-90} y={-height/2+155} font-size=20>2023</text>
         </g>
 
-        <text x={-width/4-30} y={height/2-50} font-size=20 font-style="italic"> NUMBER OF ORDERS THROUGH EACH YEAR</text>
+        <text x={-width/4-30} y={height/2-50} font-size=20> NUMBER OF ORDERS THROUGH EACH YEAR</text>
         <text x={-width/4} y={height/2-25} font-size=15 font-style="italic"> Total number of orders for this category: {usedType.sum}</text>
 
 

@@ -55,7 +55,6 @@
 
 </script>
   
-<h2>Graph title</h2>
 <style>
   rect{
     fill: blue;
@@ -63,8 +62,19 @@
   text{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     fill:black;
-    stroke:black;}
+    stroke:black;
+    }
+    h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    fill:black;
+    stroke:black;
+    font-size: 125%;
+    }
 </style>
+<h2>Proportion of orders by Product Types and Business Units + Number of orders throughout the years of each Product Type
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+  <button type="submit" onclick="location.href = './violin';">Violin plot</button>
+</h2>
 
 
 <!--Shopping Bag-->
